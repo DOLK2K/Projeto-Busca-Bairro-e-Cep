@@ -84,7 +84,14 @@
         justify-content: center;
         gap: 1rem;
         width: 90%;
+        margin: 20px;
     }
 
+}
+
+@media screen and (max-width:506px) {
+    .textos2 {
+        margin: 20px;   
+    }
 }
 

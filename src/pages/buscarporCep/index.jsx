@@ -19,10 +19,13 @@ export default function PorCep () {
             let r = await axios.get (link)
             setInformacao(r.data.logradouro + ' Bairro:' + r.data.bairro + ' Localidade: ' + r.data.localidade )
             
-        
+            if (r.data.erro) {
+                setInformacao('CEP não está disponivel')
+            }
+            
         } 
         catch (err) {
-               
+            setInformacao('')   
             setErro('CEP não encontrado')
             
         }
@@ -45,8 +48,15 @@ export default function PorCep () {
                 <input value={cep} onChange={e => setCep(e.target.value)} type="number" />
                 <button onClick={chamada}>Buscar</button>
 
-                <h2> {informacao} </h2>
-                <h2 className="erro"> {erro} </h2>
+                {informacao 
+                 ? <h2> {informacao} </h2>
+                 : <h2 className="erro"> {erro} </h2>
+                }   
+
+               
+                
+            
+                
             </div>
             </div>
             </div>

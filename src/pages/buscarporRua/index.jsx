@@ -9,14 +9,23 @@ export default function Encontar () {
     const [cidade, setCidade] = useState('')
     const [Logradouro, setLogradouro] = useState('')
     const [resultado, setResultado] = useState('')
+    const [erro, setErro] = useState('')
 
 
     async function BuscarCep () {
-        const url = 'https://viacep.com.br/ws/'+ uf +'/' + cidade + '/' + Logradouro + '/json/'
+
+        try {
+            const url = 'https://viacep.com.br/ws/'+ uf +'/' + cidade + '/' + Logradouro + '/json/'
 
           let busca =  await axios.get(url)
           setResultado ( 'CEP: ' + busca.data[0].cep )
           console.log(busca.data[0].cep)
+
+        } catch {
+
+            setErro('CEP não encontrado')
+        }
+        
     }
 
     return (
@@ -41,7 +50,7 @@ export default function Encontar () {
                 <button onClick={BuscarCep}>Buscar</button>
 
                 <h2> {resultado}  </h2>
-                <h2 className="erro">  </h2>
+                <h2 className="erro"> {erro}  </h2>
                 </div>
             </div>
             <div className='imagem-boneco'>
