@@ -17,13 +17,15 @@ export default function PorCep () {
             let link = 'https://viacep.com.br/ws/' + cep + '/json'
 
             let r = await axios.get (link)
-            setInformacao(r.data.logradouro + ' Bairro:' + r.data.bairro + ' Localidade: ' + r.data.localidade )
+            setInformacao  (r.data.logradouro + ', ' +  ' Bairro: ' + r.data.bairro + ','  +  ' Localidade: ' + r.data.localidade )
             
             if (r.data.erro) {
                 setInformacao('CEP não está disponivel')
             }
             
         } 
+
+        
         catch (err) {
             setInformacao('')   
             setErro('CEP não encontrado')
@@ -38,6 +40,7 @@ export default function PorCep () {
 
     return (
         <div className="container">
+            
             <div className="elemento1">
                 <img src= {Bonequinhos} />
                 <div className="textos">
@@ -46,7 +49,7 @@ export default function PorCep () {
             <div className="search">
                 Cep
                 <input value={cep} onChange={e => setCep(e.target.value)} type="number" />
-                <button onClick={chamada}>Buscar</button>
+                <button  onClick={chamada}>Buscar</button>
 
                 {informacao 
                  ? <h2> {informacao} </h2>
