@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# BuscarCEP e Bairro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um repositório dedicado a duas funcionalidades relacionadas a informações geográficas no Brasil: busca de CEP (Código de Endereçamento Postal) e busca de bairro a partir de um CEP. Essas funcionalidades são implementadas em REACTJS e são úteis para aplicações que requerem a obtenção rápida e precisa de informações de endereços.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+<p>1.A função buscar_cep permite buscar a um CEP específico. Para conseguir isso você inclui o logradouro, bairro, UF correspondentes ao CEP fornecido. </p>
+2. Busca de Bairro por CEP
+A função buscar_bairro_por_cep permite obter o nome do bairro correspondente a um determinado CEP. Essa função é útil quando apenas a informação do bairro é necessária.
 
-### `npm start`
+<h2> Tecnologias Utilizadas </h2>
+<li>ReactJS </li>
+<li>API ViaCEP </li>`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2>Como Contribuir </h2>
+<p>1.Você fará o fork do nosso repositório, pelo botão que aparece no canto direito superior fork.</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<p>Como Executar Localmente</p>
+<p>Para colocar agora os arquivos na sua máquina, você fará um clone do repositório adicionado no seu github. Para isso, dentro do seu repositório haverá um botão code, onde você conseguirá copiar uma url. Utilize-a para rodar o comando dentro da pasta que quiser git clone <link copiado>. </p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src='https://camo.githubusercontent.com/8b81cc75022bb54a4fff8cb6d0f18038f4b78e06f5d64c92360097ecd1f1dcd7/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f3831353539373930363632323032313633322f3835393036393032303234313236343635322f756e6b6e6f776e2e706e67' />
 
-### `npm run build`
+<p> Recomendo que Instale o git para conseguir concluir as ações para executar o Projeto</p>
+<img src ='https://lh4.googleusercontent.com/GeLd48Xi5ALzN7m1Gc_CQWAP7UMhcbxAs9RAOSEn0MhJa5W7njyuWeJyhLAt6n1n3vm48XCm8Jy5a-ivDlonT9cwcK9UY451CxOAex8HKkxSXUUlRpPx4bhcLTIL1gTfb1p4qKcH' width="300" />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>2.Dentro da pasta, no terminal a sua escolha, instale as dependências necessárias para o projeto com o comando:</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ```bash
+npm install
+```` 
+<h4>Para iniciar o Projeto se usa o Comando:</h4>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ```bash
+npm start
+```` 
